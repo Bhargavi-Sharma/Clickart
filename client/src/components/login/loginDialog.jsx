@@ -38,19 +38,19 @@ const LoginButton = styled(Button)`
     border:solid;
 `
 
-const RequestOTP = styled(Button)(({ theme}) => ({
-    textTransform: 'none',
-    background: '#FFF',
-    color: '#000000',
-    height: '48px',
-    borderRadius: '2px',
-    boxShadow: '0 2px 4px 0 rgb(0 0 0/40%)',
-    border:'solid',
-    ':hover': {
-        color: 'theme.palette[color].main',
-        backgroundColor: 'white',
-      },
-}));
+// const RequestOTP = styled(Button)(({ theme}) => ({
+//     textTransform: 'none',
+//     background: '#FFF',
+//     color: '#000000',
+//     height: '48px',
+//     borderRadius: '2px',
+//     boxShadow: '0 2px 4px 0 rgb(0 0 0/40%)',
+//     border:'solid',
+//     ':hover': {
+//         color: 'theme.palette[color].main',
+//         backgroundColor: 'white',
+//       },
+// }));
 
 const Text= styled(Typography)`
     font-size: 12px;
@@ -165,8 +165,8 @@ return(
                         <TextField variant='standard' onChange={(e) => onValueChange(e)} name='password' label="Enter Password"/>
                         <Text> By continuing, you agree to Clickart's Terms of Use and Privacy Policy.</Text>
                         <LoginButton onClick={() => loginUser()}> Login</LoginButton>
-                        <Typography style={{textAlign: 'center'}}> OR </Typography>
-                        <RequestOTP disable="block">Request OTP</RequestOTP>
+                        {/* <Typography style={{textAlign: 'center'}}> OR </Typography>
+                        <RequestOTP disable="block">Request OTP</RequestOTP> */}
                         <CreateAccount onClick={() => toggleSignup()}>New to Clickart? Create an account.</CreateAccount>
                     </Wrapper>
                     :
