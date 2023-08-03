@@ -28,8 +28,8 @@ export const paymentResponse = (request, response) => {
     if (isVerifySignature) {
         let paytmParams = {};
         paytmParams["MID"] = request.body.MID;
-        paytmParams["ORDERID"] = request.body.ORDERID;
-
+        paytmParams["ORDERID"] = request.body.ORDER_ID;
+        
         paytmchecksum.generateSignature(paytmParams, 'bKMfNxPPf_QdZppa').then(function (checksum) {
 
             paytmParams["CHECKSUMHASH"] = checksum;
