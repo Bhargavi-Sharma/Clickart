@@ -13,17 +13,11 @@ dotenv.config();
 const app = express();
 
 const PORT = 8000;
-// process.env.PORT||
+
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
-
-
-Connection(URL);
-
-// if(process.env.NODE_ENV==='production'){
-//     app.use(express.static('client/build'))
-// }
+Connection(username, password);
 
 app.listen(PORT, () => console.log(`Server is running successfully on PORT ${PORT}`));
 DefaultData();
