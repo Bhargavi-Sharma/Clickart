@@ -12,7 +12,7 @@ import Routes from './routes/route.js';
 dotenv.config();
 const app = express();
 
-const PORT = 8000;
+const PORT = process.env.PORT||8000;
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
@@ -36,6 +36,6 @@ paytmParams['INDUSTRY_TYPE_ID'] = process.env.PAYTM_INDUSTRY_TYPE_ID,
 paytmParams['ORDER_ID'] = uuid(),
 paytmParams['CUST_ID'] = process.env.PAYTM_CUST_ID,
 paytmParams['TXN_AMOUNT'] = '100',
-paytmParams['CALLBACK_URL'] = 'http://localhost:8000/callback'
+paytmParams['CALLBACK_URL'] = 'process.env.REACT_APP_API_URL/callback'
 paytmParams['EMAIL'] = 'bhargavi131313@gmail.com'
 paytmParams['MOBILE_NO'] = '1234567852'
